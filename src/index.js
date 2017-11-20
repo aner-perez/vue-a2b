@@ -28,7 +28,7 @@ const VueAB = {
           || randomCandidate(ctx.children)
 
         storage.entry = {name, winner}
-        return variations[winner]
+        return variations[winner][0]
       }
     })
 
