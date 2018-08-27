@@ -28,7 +28,9 @@ const VueAB = {
           || randomCandidate(ctx.children)
 
         storage.entry = {name, winner}
-        return variations[winner][0]
+		if(variations[winner].length > 1) throw 'VueA2B Error: Only one root node allowed!'
+
+		return variations[winner][0]
       }
     })
 
